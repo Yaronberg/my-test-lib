@@ -1,15 +1,26 @@
 {
-  "name": "my-test-lib",
+  "name": "my-test-lib-123",
   "version": "0.1.0",
-  "private": true,
+  "author": "Yaronberg",
+  "private": false,
+  "main": "dist/testLib.umd.js",
+  "unpkg": "dist/testLib.umd.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name testLib ./src/main.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.2.20"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
